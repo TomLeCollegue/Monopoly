@@ -7,8 +7,8 @@ public abstract class Propriete extends Case {
         super();
     }
 
-    public Propriete(int coutAchat, int loyer, String nom) {
-        super(nom);
+    public Propriete(int coutAchat, int loyer, String nom, Case caseSuivante) {
+        super(nom, caseSuivante);
         this.coutAchat = coutAchat;
         this.loyer = loyer;
     }
@@ -30,11 +30,11 @@ public abstract class Propriete extends Case {
     }
 
     public String getNom() {
-        return this.nom;
+        return this.name;
     }
 
     public void setNom(String nom) {
-        this.nom = nom;
+        this.name = nom;
     }
 
     @Override

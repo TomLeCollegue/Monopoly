@@ -3,7 +3,7 @@ package EntrepriseCorp.Cases;
 public class Start extends Case {
     private int gain;
 
-    public Start() {
+    public Start(String name) {
         super("Start");
         this.gain = 200;
     }
