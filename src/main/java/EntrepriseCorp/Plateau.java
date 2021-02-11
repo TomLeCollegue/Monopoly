@@ -10,10 +10,8 @@ public class Plateau {
     private ArrayList<Quartier> quartiers = new ArrayList<Quartier>();
 
     public Plateau() {
-
+        cases = createCase();
     }
-
-
 
     private ArrayList<Case> createCase(){
         ArrayList<Case> cases = new ArrayList<Case>();
@@ -75,8 +73,17 @@ public class Plateau {
         cases.add(lecourbe);
         Case belleville = new Terrain(60,4,"Boulevard de Belleville",lecourbe);
         cases.add(belleville);
-        
+        start.setCaseSuivante(belleville);
+
         return cases;
+    }
+    
+    public Case getPositionJoueur(int resultDes, Case caseDepart){
+        for (int i = 0; i < resultDes; i++) {
+            caseDepart = caseDepart.getCaseSuivante();
+        }
+
+        return caseDepart;
     }
     
 

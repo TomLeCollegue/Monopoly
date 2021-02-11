@@ -1,9 +1,7 @@
 package EntrepriseCorp.Cases.Etats;
 
-import EntrepriseCorp.Cases.Case;
-
-public class EtatLibre implements Etat {
-    public EtatLibre(int tarif) {
+public class EtatLibreTerrain implements Etat {
+    public EtatLibreTerrain(int tarif) {
         super(tarif);
     }
 

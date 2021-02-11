@@ -1,6 +1,10 @@
 package EntrepriseCorp.Cases.Etats;
 
 public class EtatPossedeService implements Etat, EtatPropriete {
+    public EtatPossedeService(int tarif) {
+        super(tarif);
+    }
+
     @Override
     public int demandeLoyer() {
         return 0;

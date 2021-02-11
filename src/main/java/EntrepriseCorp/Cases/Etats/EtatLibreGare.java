@@ -1,9 +1,7 @@
 package EntrepriseCorp.Cases.Etats;
 
-import EntrepriseCorp.Cases.Case;
-
-public class EtatLibre implements Etat {
-    public EtatLibre(int tarif) {
+public class EtatLibreGare implements Etat {
+    public EtatLibreGare(int tarif) {
         super(tarif);
     }
 
@@ -23,6 +21,6 @@ public class EtatLibre implements Etat {
 
     @Override
     public Etat miseAJourEtat() {
-        return;
+        return new EtatPossedeGare();
     }
 }

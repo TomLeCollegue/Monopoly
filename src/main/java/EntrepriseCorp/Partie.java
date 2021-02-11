@@ -6,7 +6,7 @@ public class Partie {
 
     private Plateau plateau;
     private ArrayList<Joueur> joueurs = new ArrayList<Joueur>();
-    private Joueur joueurCourant;
+    private int indexJoeurCourant;
 
 
     public Plateau getPlateau() {
@@ -21,26 +21,30 @@ public class Partie {
         return this.joueurs;
     }
 
-    public void setJoueurs(ArrayList<Joueur> joueurs) {
-        this.joueurs = joueurs;
-    }
-
-    public Joueur getJoueurCourant() {
-        return this.joueurCourant;
-    }
-
-    public void setJoueurCourant(Joueur joueurCourant) {
-        this.joueurCourant = joueurCourant;
-    }
-
-
-    public Partie(Plateau plateau, ArrayList<Joueur> joueurs, Joueur joueurCourant) {
-        this.plateau = plateau;
-        this.joueurs = joueurs;
-        this.joueurCourant = joueurCourant;
-    }
-
     public Partie(){};
-    
 
+
+    public void createJoueur(String nom){
+        Joueur joueur = new Joueur(nom, plateau.cases.get(0), this);
+    }
+
+
+
+    // Gestion debut de tour ----------------------------------------------------------------
+    public void donnerLaMain(){
+        joueurs.get(indexJoeurCourant).jouerUnTour();
+    }
+
+
+    public void prochainJoueur() {
+        if(indexJoeurCourant != joueurs.size()-1){
+            indexJoeurCourant++;
+        }
+        else {
+            indexJoeurCourant = 0;
+        }
+        donnerLaMain();
+    }
+
+    // --------------------------------------------------------------------------------------
 }

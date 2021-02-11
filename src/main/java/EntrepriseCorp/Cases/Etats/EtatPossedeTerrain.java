@@ -1,6 +1,10 @@
 package EntrepriseCorp.Cases.Etats;
 
 public class EtatPossedeTerrain implements Etat, EtatPropriete {
+    public EtatPossedeTerrain(int tarif) {
+        super(tarif);
+    }
+
     @Override
     public void demandeConsigne() {
         return;
