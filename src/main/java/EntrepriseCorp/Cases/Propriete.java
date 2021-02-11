@@ -1,7 +1,15 @@
 package EntrepriseCorp.Cases;
+
+import EntrepriseCorp.Cases.Etats.Etat;
+import EntrepriseCorp.Cases.Etats.EtatLibre;
+import EntrepriseCorp.Cases.Etats.EtatLibreService;
+import EntrepriseCorp.Joueur;
+
 public abstract class Propriete extends Case {
-    private int coutAchat;
-    private int loyer;
+    protected Etat state;
+    protected Joueur proprietaire;
+    protected int coutAchat;
+    protected int loyer;
 
     public Propriete() {
         super();
@@ -11,6 +19,26 @@ public abstract class Propriete extends Case {
         super(nom, caseSuivante);
         this.coutAchat = coutAchat;
         this.loyer = loyer;
+    }
+
+    public void proposeAchat(int tarif) {
+        return;
+    }
+
+    public boolean achat(Joueur j) {
+        if(state instanceof EtatLibre && j.getSolde() >= coutAchat) {
+            ((EtatLibre) state).achat();
+            return true;
+        }
+        return false;
+    }
+
+    public Etat getState() {
+        return state;
+    }
+
+    public void setState(Etat state) {
+        this.state = state;
     }
 
     public int getCoutAchat() {
@@ -37,5 +65,11 @@ public abstract class Propriete extends Case {
         this.name = nom;
     }
 
-    
+    public Joueur getProprietaire() {
+        return proprietaire;
+    }
+
+    public void setProprietaire(Joueur proprietaire) {
+        this.proprietaire = proprietaire;
+    }
 }

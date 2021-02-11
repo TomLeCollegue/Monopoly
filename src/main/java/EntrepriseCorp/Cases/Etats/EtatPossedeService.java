@@ -1,32 +1,14 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatPossedeService implements Etat, EtatPropriete {
-    public EtatPossedeService(int tarif) {
-        super(tarif);
-    }
+import EntrepriseCorp.Cases.Propriete;
 
-    @Override
-    public int demandeLoyer() {
-        return 0;
-    }
-
-    @Override
-    public int demandeLanceDes() {
-        return 0;
+public class EtatPossedeService extends EtatPossede {
+    public EtatPossedeService(Propriete c) {
+        super(c);
     }
 
     @Override
     public int calculLoyer() {
-        return 0;
-    }
-
-    @Override
-    public boolean achat() {
-        return false;
-    }
-
-    @Override
-    public void demandeConsigne() {
-        return;
+        return c.getLoyer() * demandeLanceDes();
     }
 }

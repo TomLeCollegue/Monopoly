@@ -1,26 +1,15 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatLibreService implements Etat {
-    public EtatLibreService(int tarif) {
-        super(tarif);
-    }
+import EntrepriseCorp.Cases.Propriete;
 
-    public int proposeAchat() {
-        return tarif;
-    }
-
-    @Override
-    public Etat achat(int solde) {
-
+public class EtatLibreService extends EtatLibre {
+    public EtatLibreService(Propriete c) {
+        super(c);
     }
 
     @Override
-    public void demandeConsigne() {
-        return;
+    public void achat() {
+        c.setState(new EtatPossedeService(c));
     }
 
-    @Override
-    public Etat miseAJourEtat() {
-        return;
-    }
 }

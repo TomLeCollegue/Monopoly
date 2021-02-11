@@ -1,14 +1,13 @@
 package EntrepriseCorp.Cases.Etats;
 
-import EntrepriseCorp.Cases.Case;
+import EntrepriseCorp.Cases.Propriete;
 
 public abstract class Etat {
-    protected Case c;
+    protected Propriete c;
 
-    protected Etat(Case c) {
+    protected Etat(Propriete c) {
         this.c = c;
     }
 
-    protected abstract void demandeConsigne();
-    protected abstract boolean achat();
+    public abstract int demandeConsigne();
 }

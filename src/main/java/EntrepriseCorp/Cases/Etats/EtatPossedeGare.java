@@ -1,32 +1,14 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatPossedeGare implements Etat, EtatPropriete {
-    public EtatPossedeGare(int tarif) {
-        super(tarif);
-    }
+import EntrepriseCorp.Cases.Propriete;
 
-    @Override
-    public int demandeLoyer() {
-        return 0;
-    }
-
-    @Override
-    public int demandeLanceDes() {
-        return 0;
+public class EtatPossedeGare extends EtatPossede{
+    public EtatPossedeGare(Propriete c) {
+        super(c);
     }
 
     @Override
     public int calculLoyer() {
-        return 0;
-    }
-
-    @Override
-    public boolean achat() {
-        return
-    }
-
-    @Override
-    public void demandeConsigne() {
-        return;
+        return c.getLoyer();
     }
 }

@@ -1,19 +1,14 @@
 package EntrepriseCorp.Cases.Etats;
 
-import EntrepriseCorp.Cases.Case;
+import EntrepriseCorp.Cases.Propriete;
 
-public class EtatConstructible extends Etat implements EtatPropriete {
-    public EtatConstructible(Case c) {
-        super(tarif);
+public class EtatConstructible extends EtatPossede {
+    public EtatConstructible(Propriete c) {
+        super(c);
     }
 
     public int proposeAchat() {
-        return tarif;
-    }
-
-    @Override
-    public boolean achat() {
-        return true;
+        return 0;
     }
 
     @Override
@@ -32,7 +27,7 @@ public class EtatConstructible extends Etat implements EtatPropriete {
     }
 
     @Override
-    public void demandeConsigne() {
-        return;
+    public int demandeConsigne() {
+        return 0;
     }
 }
