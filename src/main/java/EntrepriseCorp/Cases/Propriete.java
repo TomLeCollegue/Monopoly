@@ -37,12 +37,5 @@ public abstract class Propriete extends Case {
         this.name = nom;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-            " coutAchat='" + getCoutAchat() + "'" +
-            ", loyer='" + getLoyer() + "'" +
-            ", nom='" + getNom() + "'" +
-            "}";
-    }
+    
 }

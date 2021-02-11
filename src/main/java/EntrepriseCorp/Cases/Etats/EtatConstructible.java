@@ -1,10 +1,11 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatConstructible extends Etat {
+public class EtatConstructible implements Etat {
     public int proposeAchat(int tarif) {
         return 0;
     }
 
+    @Override
     public boolean achat() {
         return true;
     }

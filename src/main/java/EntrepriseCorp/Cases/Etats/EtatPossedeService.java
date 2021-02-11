@@ -1,6 +1,6 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatPossedeService extends Etat implements EtatPropriete {
+public class EtatPossedeService implements Etat, EtatPropriete {
     @Override
     public int demandeLoyer() {
         return 0;
@@ -13,11 +13,6 @@ public class EtatPossedeService extends Etat implements EtatPropriete {
 
     @Override
     public int calculLoyer() {
-        return 0;
-    }
-
-    @Override
-    public int proposeAchat(int tarif) {
         return 0;
     }
 

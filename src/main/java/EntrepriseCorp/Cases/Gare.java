@@ -6,9 +6,8 @@ public class Gare extends Propriete {
 
     public ArrayList<Gare> AutresGares = new ArrayList<Gare>();
 
-    public Gare(ArrayList<Gare> AutresGares, int loyer, String nom, int coutAchat) {
-        super(coutAchat, loyer, nom);
-        this.AutresGares = AutresGares;
+    public Gare(int loyer, String nom, int coutAchat, Case caseSuivante) {
+        super(coutAchat, loyer, nom, caseSuivante);
     }
 
 

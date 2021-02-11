@@ -1,3 +1,5 @@
+package EntrepriseCorp;
+
 public class Joueur {
     private String nom;
     private int solde;
@@ -7,7 +9,6 @@ public class Joueur {
         this.nom = nom;
         this.solde = 1500; // Solde de depart d'apres les règles du jeu
     }
-
 
     public String getNom() {
         return this.nom;

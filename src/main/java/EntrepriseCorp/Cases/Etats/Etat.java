@@ -1,5 +1,6 @@
 package EntrepriseCorp.Cases.Etats;
 
-public abstract class Etat {
-    public abstract void demandeConsigne();
+public interface Etat {
+    public void demandeConsigne();
+    public boolean achat();
 }
