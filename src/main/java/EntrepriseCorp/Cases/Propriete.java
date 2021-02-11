@@ -1,5 +1,4 @@
-package EntrepriseCorp;
-
+package EntrepriseCorp.Cases;
 public abstract class Propriete extends Case {
     private int coutAchat;
     private int loyer;

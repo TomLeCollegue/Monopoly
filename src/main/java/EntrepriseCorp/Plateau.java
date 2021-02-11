@@ -1,3 +1,9 @@
+package EntrepriseCorp;
+
+import java.util.ArrayList;
+
+import EntrepriseCorp.Cases.Gare;
+
 public class Plateau {
 
     public ArrayList<Gare> AutresGares = new ArrayList<Gare>();

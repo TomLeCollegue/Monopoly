@@ -1,3 +1,7 @@
+package EntrepriseCorp;
+
+import java.util.ArrayList;
+
 public class Partie {
 
     private Plateau plateau;

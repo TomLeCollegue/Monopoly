@@ -1,4 +1,4 @@
-package EntrepriseCorp;
+package EntrepriseCorp.Cases;
 
 import EntrepriseCorp.Cases.Etats.EtatPropriete;
 

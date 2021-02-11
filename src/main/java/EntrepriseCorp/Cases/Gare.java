@@ -1,3 +1,7 @@
+package EntrepriseCorp.Cases;
+
+import java.util.ArrayList;
+
 public class Gare extends Propriete {
 
     public ArrayList<Gare> AutresGares = new ArrayList<Gare>();

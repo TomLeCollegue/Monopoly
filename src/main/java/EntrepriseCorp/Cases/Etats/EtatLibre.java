@@ -1,4 +1,4 @@
-package EntrepriseCorp;
+package EntrepriseCorp.Cases.Etats;
 
 public interface EtatLibre {
     public int demandeConsigneLibre();

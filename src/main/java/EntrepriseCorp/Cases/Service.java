@@ -1,3 +1,7 @@
+package EntrepriseCorp.Cases;
+
+import java.util.ArrayList;
+
 public class Service extends Propriete {
 
 

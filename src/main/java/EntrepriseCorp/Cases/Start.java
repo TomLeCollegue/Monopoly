@@ -1,4 +1,4 @@
-package EntrepriseCorp;
+package EntrepriseCorp.Cases;
 
 public class Start extends Case {
     private int gain;

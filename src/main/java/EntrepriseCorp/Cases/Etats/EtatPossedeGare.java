@@ -1,4 +1,4 @@
-package EntrepriseCorp;
+package EntrepriseCorp.Cases.Etats;
 
 public class EtatPossedeGare implements EtatPropriete {
     @Override
