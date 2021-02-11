@@ -1,11 +1,6 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatPossedeGare implements EtatPropriete {
-    @Override
-    public int demandeConsigne() {
-        return 0;
-    }
-
+public class EtatPossedeGare extends Etat implements EtatPropriete {
     @Override
     public int demandeLoyer() {
         return 0;
@@ -29,5 +24,10 @@ public class EtatPossedeGare implements EtatPropriete {
     @Override
     public boolean achat() {
         return false;
+    }
+
+    @Override
+    public void demandeConsigne() {
+        return;
     }
 }

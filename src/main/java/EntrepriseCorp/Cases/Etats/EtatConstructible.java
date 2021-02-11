@@ -1,6 +1,6 @@
 package EntrepriseCorp.Cases.Etats;
 
-public class EtatLibre extends Etat {
+public class EtatConstructible extends Etat {
     public int proposeAchat(int tarif) {
         return 0;
     }
