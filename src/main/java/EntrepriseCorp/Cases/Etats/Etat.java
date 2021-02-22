@@ -1,13 +1,14 @@
 package EntrepriseCorp.Cases.Etats;
 
 import EntrepriseCorp.Cases.Propriete;
+import EntrepriseCorp.Joueur;
 
 public abstract class Etat {
-    protected Propriete c;
 
-    protected Etat(Propriete c) {
-        this.c = c;
-    }
 
-    public abstract int demandeConsigne();
+    public Etat(){}
+
+
+    public abstract void demanderConsigne(Joueur joueur);
+
 }

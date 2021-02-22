@@ -1,17 +1,18 @@
 package EntrepriseCorp.Cases.Etats;
 
 import EntrepriseCorp.Cases.Propriete;
+import EntrepriseCorp.Cases.Terrain;
 import EntrepriseCorp.Joueur;
 
 import java.util.Scanner;
 
-public class EtatLibreService extends Etat {
+public class EtatTerrainLibre extends Etat {
 
-    private Propriete propriete;
+    private Terrain propriete;
 
 
-    public EtatLibreService(Propriete propriete) {
-        this.propriete = propriete;
+    public EtatTerrainLibre(Terrain propriete) {
+       this.propriete = propriete;
     }
 
     @Override
@@ -38,6 +39,7 @@ public class EtatLibreService extends Etat {
 
         if((joueur.getSolde() - prix) >= 0 ){
             joueur.setSolde(joueur.getSolde() - prix);
+            System.out.println(joueur.getNom() + " possede maintenant " + propriete.getNom() + ". (-" + prix + " )");
             DevientEtatPossede(joueur);
         }
         else{
@@ -48,8 +50,7 @@ public class EtatLibreService extends Etat {
 
     private void DevientEtatPossede(Joueur joueur) {
         propriete.setProprietaire(joueur);
-        propriete.setState(new EtatServicePossede(propriete));
+        propriete.setState(new EtatTerrainPossede(propriete, joueur));
         joueur.donnerLaMain();
     }
-
 }

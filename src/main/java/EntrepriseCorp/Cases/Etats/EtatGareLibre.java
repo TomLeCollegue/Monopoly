@@ -5,12 +5,12 @@ import EntrepriseCorp.Joueur;
 
 import java.util.Scanner;
 
-public class EtatLibreService extends Etat {
+public class EtatGareLibre extends Etat {
 
     private Propriete propriete;
 
 
-    public EtatLibreService(Propriete propriete) {
+    public EtatGareLibre(Propriete propriete) {
         this.propriete = propriete;
     }
 
@@ -18,6 +18,7 @@ public class EtatLibreService extends Etat {
     public void demanderConsigne(Joueur joueur) {
         proposerAchat(joueur);
     }
+
 
     public void proposerAchat(Joueur joueur){
         System.out.println("Voulez vous acheter le terrain (y/n)");
@@ -48,8 +49,11 @@ public class EtatLibreService extends Etat {
 
     private void DevientEtatPossede(Joueur joueur) {
         propriete.setProprietaire(joueur);
-        propriete.setState(new EtatServicePossede(propriete));
+        propriete.setState(new EtatGarePossede(propriete));
         joueur.donnerLaMain();
+    }
+
+    public void verifConstructible(){
     }
 
 }

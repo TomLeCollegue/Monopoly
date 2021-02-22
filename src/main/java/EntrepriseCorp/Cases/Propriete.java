@@ -1,12 +1,10 @@
 package EntrepriseCorp.Cases;
 
 import EntrepriseCorp.Cases.Etats.Etat;
-import EntrepriseCorp.Cases.Etats.EtatLibre;
-import EntrepriseCorp.Cases.Etats.EtatLibreService;
+
 import EntrepriseCorp.Joueur;
 
 public abstract class Propriete extends Case {
-    protected Etat state;
     protected Joueur proprietaire;
     protected int coutAchat;
     protected int loyer;
@@ -25,22 +23,6 @@ public abstract class Propriete extends Case {
         return;
     }
 
-    public boolean achat(Joueur j) {
-        if(state instanceof EtatLibre && j.getSolde() >= coutAchat) {
-            ((EtatLibre) state).achat();
-            return true;
-        }
-        return false;
-    }
-
-    public Etat getState() {
-        return state;
-    }
-
-    public void setState(Etat state) {
-        this.state = state;
-    }
-
     public int getCoutAchat() {
         return this.coutAchat;
     }
@@ -51,10 +33,6 @@ public abstract class Propriete extends Case {
 
     public int getLoyer() {
         return this.loyer;
-    }
-
-    public void setLoyer(int loyer) {
-        this.loyer = loyer;
     }
 
     public String getNom() {

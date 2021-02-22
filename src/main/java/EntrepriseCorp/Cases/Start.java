@@ -1,18 +1,14 @@
 package EntrepriseCorp.Cases;
 
+import EntrepriseCorp.Cases.Etats.EtatCaseStart;
+
 public class Start extends Case {
     private int gain;
 
     public Start(String name) {
         super("Start");
-        this.gain = 200;
+        etat = new EtatCaseStart(this);
     }
 
-    public int getGain() {
-        return this.gain;
-    }
 
-    public void setGain(int gain) {
-        this.gain = gain;
-    }
 }

@@ -3,18 +3,14 @@ package EntrepriseCorp;
 import java.util.ArrayList;
 
 public class Partie {
-
-    private Plateau plateau;
+    public static boolean Cheat = false;
+    private Plateau plateau = new Plateau();
     private ArrayList<Joueur> joueurs = new ArrayList<Joueur>();
-    private int indexJoeurCourant;
+    private int indexJoeurCourant = 0;
 
 
     public Plateau getPlateau() {
         return this.plateau;
-    }
-
-    public void setPlateau(Plateau plateau) {
-        this.plateau = plateau;
     }
 
     public ArrayList<Joueur> getJoueurs() {
@@ -25,13 +21,16 @@ public class Partie {
 
 
     public void createJoueur(String nom){
-        Joueur joueur = new Joueur(nom, plateau.cases.get(0), this);
+        Joueur Newjoueur = new Joueur(nom, plateau.cases.get(0), this);
+        joueurs.add(Newjoueur);
     }
 
 
 
     // Gestion debut de tour ----------------------------------------------------------------
     public void donnerLaMain(){
+        System.out.println("-----------------------------------------------------------------");
+        System.out.println("C'est a "+ joueurs.get(indexJoeurCourant).getNom() + " de jouer");
         joueurs.get(indexJoeurCourant).jouerUnTour();
     }
 
