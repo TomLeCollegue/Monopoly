@@ -18,7 +18,7 @@ public class EtatTerrainPossede extends Etat {
     @Override
     public void demanderConsigne(Joueur joueur) {
         verifConstructible(joueur);
-        if(joueur != propriete.getProprietaire()){
+         if(joueur != propriete.getProprietaire()){
             demanderLoyer(joueur);
         }
         else{
@@ -35,9 +35,8 @@ public class EtatTerrainPossede extends Etat {
     }
 
     public void verifConstructible(Joueur joueur){
-        if(propriete.getQuartier().estConstructible()){
-            propriete.getState().demanderConsigne(joueur);
-        }
+        propriete.getQuartier().estConstructible();
+        joueur.donnerLaMain();
     }
 
 }

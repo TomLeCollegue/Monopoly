@@ -145,7 +145,7 @@ public class Plateau {
     }
 
 
-    public ArrayList<Terrain> getTerrainConstructible(Joueur joueur) {
+    public ArrayList<Terrain>  getTerrainConstructible(Joueur joueur) {
         ArrayList<Terrain> terrains = new ArrayList<Terrain>();
         for(Quartier quartier : quartiers){
             if(quartier.estConstructible() && (quartier.proprietes.get(0).getProprietaire() == joueur)){
