@@ -42,4 +42,5 @@ Liste des cases pour le mode triche :
 27 Gare St Lazare
 28 Avenue des champs Elysées  bleu
 29 Rue de la paix             bleu
+1 Start
 
