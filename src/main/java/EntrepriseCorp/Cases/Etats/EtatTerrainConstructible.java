@@ -39,16 +39,21 @@ public class EtatTerrainConstructible extends Etat {
         }
     }
 
-    private void Construire(Joueur joueur) {
-
-        if((joueur.getSolde() - 100) >= 0 ){
-            joueur.setSolde(joueur.getSolde() - 100);
-            System.out.println(joueur.getNom() + " construit sur " + propriete.getNom() + ". (-100)");
-            propriete.setEtatConstruction( propriete.getEtatConstruction() + 1 );
+    public void Construire(Joueur joueur) {
+        if(propriete.getEtatConstruction() < 5){
+            if((joueur.getSolde() - 100) >= 0 ){
+                joueur.setSolde(joueur.getSolde() - 100);
+                System.out.println(joueur.getNom() + " construit sur " + propriete.getNom() + ". (-100)");
+                propriete.setEtatConstruction( propriete.getEtatConstruction() + 1 );
+            }
+            else{
+                System.out.println("vous etes trop pauvre");
+            }
         }
         else{
-            System.out.println("vous etes trop pauvre");
+            System.out.println("Terrain complet vous ne pouvez plus construire dessus");
         }
+
 
     }
 

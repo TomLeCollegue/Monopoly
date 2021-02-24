@@ -36,7 +36,6 @@ public class EtatTerrainPossede extends Etat {
 
     public void verifConstructible(Joueur joueur){
         if(propriete.getQuartier().estConstructible()){
-            propriete.setState(new EtatTerrainConstructible(propriete));
             propriete.getState().demanderConsigne(joueur);
         }
     }
